@@ -1,12 +1,13 @@
-#Creo una funcion donde pido al usuario la base si es 10 coge por defecto la altura 3 si no se la pido al usuario 
-#y muestro por pantalla el resultado
-def area(base):
-    if base == 10:
-        altura = 3
-    else:
-        altura = int(input("Indica la altura del rectangulo "))
+#Creo una funcion donde recibo el area y la altura  por defecto en 3 e imprimo la operacion
+def area(base, altura = 3):
     print(f"El area seria {round(base*altura,2)}")
-#Creo mi main donde pido la base y ejecuto la funcion pasandole este dato
+#Creo mi main donde pido la base y la altura y no me dan la altura cojo la que esta  por defecto y si no paso ambos datos
 if __name__=="__main__":
     base = int(input("Indica la base del rectangulo "))
-    area(base)
+    altura = input("Indica la altura del rectangulo ")
+    if altura != "":
+        altura =int(altura)
+    if type(altura) == str:
+        area(base)
+    else:
+        area(base,altura)
