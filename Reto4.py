@@ -18,6 +18,6 @@ while True:
         print("Es un numero mayor")
         intentos+=1
     else:
-        print("Ese numero esta entre 1 y 100")
+        print("Ese numero esta no entre 1 y 100")
         intentos+=1
 print(f"Solo has necesitado {intentos} intentos")#Contamos los intentos y se los indicamos al usuario
